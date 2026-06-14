@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An anniversary gift for my wife ❤</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffe5ec;
+            color: #4c1130;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        input [type="password"] {
+            padding: 10px;
+            width: 80%;
+            border: 2px solid #ffb3c6;
+            border-radius: 10px;
+            outline: none;
+            text-align: center;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background-color: #ff758f; }
+        #secret-content { display: none; }
+        .heart { color: #ff4d6d; font-size: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="container" id="login-box">
+    <div class="heart">❤️</div>
+    <h2>Unlock Your Letter</h2>
+    <p>Enter the password to read:</p>
+    <input type="password" id="password" placeholder="Hint: Ask your husband?">
+    <br>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error" style="color: red; display: none;">Oops! Try again love. 😘</p>
+</div>
+
+<div class="container" id="secret-content">
+    <div class="heart">💖</div>
+    <h2>To My Favorite Person In This Whole World,</h2>
+    <p style="text-align: left; line-height: 1.6;">
+        Hey beautiful,<br><br>
+        [Aapki ye adaa jispe hum marte hai, ek baar dekhlu hum taakte reh jaate hai,,,😌✨
+ Zulfe jo aapki aap khol k rakhte hai,, aapko kya pata hum uspe marte hai,,,❤️ ✨
+Nazre jo mili ek pal ke liye hi sahi,, aapko kya pata hum us pal ke liye marte hai,,,💞✨
+Aap ek lafz bhi kehdo wo duniyaki sabse surili dhuun lagti hai,, aapko kya pata hum us dhuun ko sunne ke liye marte hai,,,,,,,💝✨
+Aap pucho humare dil pe aap kabh kabh aate ho,, aapne to bas ekbar aye the or kabhi na juda hoye ho,,,😌💖
+Pata nehi kya amal kiye thee esi biwi mil gayi 😌😌
+Humara bas chale to duniya ki saari khushi aapke charno pe laakar rakhdu,,, par is nachiz ko wo karne k liye 10 saal bhi jo therna hai 😔
+Koi baat nehi in 10 saal k andar bhi din honge, eksath guzar denge 😌✨
+Kabhi na chorna humey,, aapka pyar humey amar karti hai ✨
+Or haaa,
+Yebhi naa bhuul naaa,,,,
+Hum aapse bohottttttt matlab bohottttt pyar karte hai 💗✨bee inteehaaaaaan pyarr 😌✨]<br><br>
+        I love you like the moon loves the earth...
+    </p>
+</div>
+
+<script>
+    function checkPassword() {
+        // Change 'ourdate' to whatever password you want! (Keep it lowercase)
+        const correctPassword = "200910"; 
+        const userInput = document.getElementById("password").value.toLowerCase().trim();
+        
+        if (userInput === correctPassword) {
+            document.getElementById("login-box").style.display = "none";
+            document.getElementById("secret-content").style.display = "block";
+        } else {
+            document.getElementById("error").style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
